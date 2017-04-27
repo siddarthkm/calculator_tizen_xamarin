@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="Calculator.Tizen" version="1.0.0">
-	<profile name="common" />
-	<ui-application appid="org.tizen.example.Calculator.Tizen"
-					exec="Calculator.Tizen.exe"
-					type="dotnet"
-					multiple="false"
-					taskmanage="true"
-					launch_mode="single">
-	<icon>Calculator.Tizen.png</icon>
-	<label>Calculator.Tizen</label>
-	</ui-application>
+<manifest package="Calculator.Tizen" version="1.0.0" api-version="3.0" xmlns="http://tizen.org/ns/packages">
+  <profile name="common" />
+  <ui-application appid="org.tizen.example.Calculator.Tizen" exec="Calculator.Tizen.exe" multiple="false" taskmanage="true" splash-screen-display="true" type="dotnet" launch_mode="single">
+    <icon>Calculator.Tizen.png</icon>
+    <label>Calculator.Tizen</label>
+  </ui-application>
+  <shortcut-list />
+  <privileges>
+    <privilege>http://tizen.org/privilege/internet</privilege>
+  </privileges>
 </manifest>
