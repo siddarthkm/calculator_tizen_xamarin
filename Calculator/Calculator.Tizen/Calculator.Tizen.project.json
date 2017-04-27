@@ -1,0 +1,34 @@
+﻿{
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "debugType": "portable",
+    "platform": "AnyCPU",
+    "preserveCompilationContext": true
+  },
+  "dependencies": {
+    "ElmSharp": "1.1.0-beta-009",
+    "Microsoft.Azure.Mobile": "1.0.2",
+    "Microsoft.Azure.Mobile.Analytics": "1.0.2",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.0"
+    },
+    "Microsoft.Rest.ClientRuntime": "2.3.6",
+    "Newtonsoft.Json": "10.0.2",
+    "Tizen.Build.Task": "0.0.61",
+    "Tizen.Library": "1.0.0-pre3",
+    "Xamarin.Forms": "2.3.3.163-pre3",
+    "Xamarin.Forms.Platform.Tizen": "2.3.4-r214-002"
+  },
+  "runtimes": {
+    "win": {},
+    "linux": {}
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "portable-net45+wp80+win81+wpa81",
+        "netstandard1.6"
+      ]
+    }
+  }
+}
