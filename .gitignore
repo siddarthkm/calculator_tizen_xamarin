@@ -1,0 +1,5 @@
+bin
+Debug
+Release
+packages
+project.lock.json
