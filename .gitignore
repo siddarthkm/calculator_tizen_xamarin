@@ -3,3 +3,4 @@ Debug
 Release
 packages
 project.lock.json
+.vs
