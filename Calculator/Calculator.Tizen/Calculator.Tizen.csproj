@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--  Property of Tizen Build Task-->
+    <PropertyGroup>
+        <TizenApplication>true</TizenApplication>
+    </PropertyGroup>
+    
+
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{2F98DAC9-6F16-457B-AED7-D43CAC379341};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{FCF2BD36-8939-4E77-AECF-420F256DB6D1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Calculator.Tizen</RootNamespace>
+    <AssemblyName>Calculator.Tizen</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <DefaultLanguage>en-US</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkIdentifier>DNXCore</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <NuGetTargetMoniker>.NETCoreApp,Version=v1.0</NuGetTargetMoniker>
+    <NoStdLib>true</NoStdLib>
+    <NoWarn>$(NoWarn);1701</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Calculator.Tizen.project.json" />
+    <None Include="tizen-manifest.xml" />
+    <None Include="shared\res\Calculator.Tizen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator.Tizen.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\CommandButtonRenderer.cs" />
+    <Compile Include="Renderers\ElementButtonRenderer.cs" />
+    <Compile Include="Ports\DebuggingPort.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calculator\Calculator.csproj">
+      <Project>{080370dd-81ee-4d29-b977-b571eafc1428}</Project>
+      <Name>Calculator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\bg_l.png" />
+    <Content Include="res\bg_p.png" />
+    <Content Include="res\btn_delete.png" />
+    <Content Include="res\calculator_button_l_01.png" />
+    <Content Include="res\calculator_button_l_02.png" />
+    <Content Include="res\calculator_button_l_03.png" />
+    <Content Include="res\calculator_button_l_04.png" />
+    <Content Include="res\calculator_button_l_05.png" />
+    <Content Include="res\calculator_button_l_06.png" />
+    <Content Include="res\calculator_button_l_07.png" />
+    <Content Include="res\calculator_button_l_08.png" />
+    <Content Include="res\calculator_button_l_09.png" />
+    <Content Include="res\calculator_button_l_10.png" />
+    <Content Include="res\calculator_button_l_11.png" />
+    <Content Include="res\calculator_button_l_12.png" />
+    <Content Include="res\calculator_button_l_13.png" />
+    <Content Include="res\calculator_button_l_14.png" />
+    <Content Include="res\calculator_button_l_15.png" />
+    <Content Include="res\calculator_button_l_16.png" />
+    <Content Include="res\calculator_button_l_17.png" />
+    <Content Include="res\calculator_button_l_18.png" />
+    <Content Include="res\calculator_button_l_19.png" />
+    <Content Include="res\calculator_button_l_20.png" />
+    <Content Include="res\calculator_button_l_21.png" />
+    <Content Include="res\calculator_button_l_22.png" />
+    <Content Include="res\calculator_button_l_23.png" />
+    <Content Include="res\calculator_button_l_24.png" />
+    <Content Include="res\calculator_button_l_25.png" />
+    <Content Include="res\calculator_button_l_number_00.png" />
+    <Content Include="res\calculator_button_l_number_01.png" />
+    <Content Include="res\calculator_button_l_number_02.png" />
+    <Content Include="res\calculator_button_l_number_03.png" />
+    <Content Include="res\calculator_button_l_number_04.png" />
+    <Content Include="res\calculator_button_l_number_05.png" />
+    <Content Include="res\calculator_button_l_number_06.png" />
+    <Content Include="res\calculator_button_l_number_07.png" />
+    <Content Include="res\calculator_button_l_number_08.png" />
+    <Content Include="res\calculator_button_l_number_09.png" />
+    <Content Include="res\calculator_button_l_number_10.png" />
+    <Content Include="res\calculator_button_l_number_11.png" />
+    <Content Include="res\calculator_button_p_01.png" />
+    <Content Include="res\calculator_button_p_02.png" />
+    <Content Include="res\calculator_button_p_03.png" />
+    <Content Include="res\calculator_button_p_04.png" />
+    <Content Include="res\calculator_button_p_05.png" />
+    <Content Include="res\calculator_button_p_06.png" />
+    <Content Include="res\calculator_button_p_07.png" />
+    <Content Include="res\calculator_button_p_08.png" />
+    <Content Include="res\calculator_button_p_number_0.png" />
+    <Content Include="res\calculator_button_p_number_1.png" />
+    <Content Include="res\calculator_button_p_number_10.png" />
+    <Content Include="res\calculator_button_p_number_11.png" />
+    <Content Include="res\calculator_button_p_number_2.png" />
+    <Content Include="res\calculator_button_p_number_3.png" />
+    <Content Include="res\calculator_button_p_number_4.png" />
+    <Content Include="res\calculator_button_p_number_5.png" />
+    <Content Include="res\calculator_button_p_number_6.png" />
+    <Content Include="res\calculator_button_p_number_7.png" />
+    <Content Include="res\calculator_button_p_number_8.png" />
+    <Content Include="res\calculator_button_p_number_9.png" />
+    <Content Include="res\icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+		Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <PropertyGroup>
+    <!-- https://github.com/dotnet/corefxlab/tree/master/samples/NetCoreSample and
+			 https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials/target-dotnetcore-with-msbuild
+		-->
+    <!-- We don't use any of MSBuild's resolution logic for resolving the framework, so just set these two
+			 properties to any folder that exists to skip the GetReferenceAssemblyPaths task (not target) and
+			 to prevent it from outputting a warning (MSB3644).
+		-->
+    <_TargetFrameworkDirectories>$(MSBuildThisFileDirectory)</_TargetFrameworkDirectories>
+    <_FullFrameworkReferenceAssemblyPaths>$(MSBuildThisFileDirectory)</_FullFrameworkReferenceAssemblyPaths>
+    <AutoUnifyAssemblyReferences>true</AutoUnifyAssemblyReferences>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{2F98DAC9-6F16-457B-AED7-D43CAC379341}" Configuration="Debug|Any CPU">
+        <ProjectCorporateFlavorCfg />
+      </FlavorProperties>
+      <FlavorProperties GUID="{2F98DAC9-6F16-457B-AED7-D43CAC379341}" Configuration="Release|Any CPU">
+        <ProjectCorporateFlavorCfg />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
