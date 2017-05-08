@@ -150,10 +150,36 @@ namespace Calculator.ViewModels
                     return;
                 }
 
+                var commands = new Dictionary<string, string>
+                {
+                    { "F", "Factorial [ x! ]" },
+                    { "Q", "Square Root" },
+                    { "S", "Sine [ sin(x) ]" },
+                    { "C", "Cosine [ cos(x) ]" },
+                    { "T", "Tangent [ tan(x) ]" },
+                    { "N", "Natural Logarithm [ ln(x) ]" },
+                    { "G", "Common Logarithm [ log(x) ]" },
+                    { "O", "Multiplicative Inverse [ 1/x ]" },
+                    { "V", "Square [ x^2 ]" },
+                    { "P", "Exponent of 10 [ 10^x ]" },
+                    { "W", "Exponent [ y^x ]" },
+                    { "A", "Absolute Value [ |x| ]"},
+
+                    { "+", "Addition" },
+                    { "-", "Subtraction" },
+                    { "*", "Multiplication" },
+                    { "/", "Division" },
+                    { "%", "Percentage" }
+                };
+
+                string commandValue;
                 try
                 {
-                    Analytics.TrackEvent("Button Press", new Dictionary<string, string> { { "button", input }, { "orientation", "landscape" } });
-
+                    if (commands.TryGetValue(input, out commandValue))
+                    {
+                        Analytics.TrackEvent("Operation", new Dictionary<string, string> { { "operation", commandValue },
+                            { "Mode", (Calculator.FormatterInstance.IsLandscapeOrientation ? "Scientific" : "Regular") } });
+                    }
                 }
                 catch (System.Exception exc)
                 {

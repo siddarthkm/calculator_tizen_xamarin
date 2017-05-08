@@ -70,7 +70,7 @@ namespace Calculator.Tizen
                 {
                     try
                     {
-                        Analytics.TrackEvent("Orientation Changed", new Dictionary<string, string> { { "orientation", "landscape" } });
+                        Analytics.TrackEvent("Mode Changed", new Dictionary<string, string> { { "mode", "Scientific" } });
 
                     }
                     catch (System.Exception exc)
@@ -83,7 +83,7 @@ namespace Calculator.Tizen
                 {
                     try
                     {
-                        Analytics.TrackEvent("Orientation Changed", new Dictionary<string, string> { { "orientation", "portrait" } });
+                        Analytics.TrackEvent("Mode Changed", new Dictionary<string, string> { { "mode", "Regular" } });
 
                     }
                     catch (System.Exception exc)
